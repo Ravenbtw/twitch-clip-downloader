@@ -13,16 +13,13 @@ window.onload = function() {
 
 		var node2 = document.createElement('A');
 		var node2attr1 = document.createAttribute('href');
-		var node2attr2 = document.createAttribute('target');
-		var node2attr3 = document.createAttribute('class');
-		var node2attr4 = document.createAttribute('download');
+		var node2attr2 = document.createAttribute('class');
+		var node2attr3 = document.createAttribute('download');
 		node2attr1.value = twitchclipdownloader_video;
-		node2attr2.value = '_blank';
-		node2attr3.value = 'tw-button';
+		node2attr2.value = 'tw-button';
 		node2.setAttributeNode(node2attr1);
 		node2.setAttributeNode(node2attr2);
 		node2.setAttributeNode(node2attr3);
-		node2.setAttributeNode(node2attr4);
 
 		var node3 = document.createElement('SPAN');
 		var node3attr1 = document.createAttribute('class');
