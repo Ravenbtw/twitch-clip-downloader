@@ -14,26 +14,37 @@ window.onload = function() {
 		var node2 = document.createElement('A');
 		var node2attr1 = document.createAttribute('href');
 		var node2attr2 = document.createAttribute('class');
-		var node2attr3 = document.createAttribute('download');
-		node2attr1.value = twitchclipdownloader_video;
+		node2attr1.value = '#';
 		node2attr2.value = 'tw-button';
 		node2.setAttributeNode(node2attr1);
 		node2.setAttributeNode(node2attr2);
-		node2.setAttributeNode(node2attr3);
 
 		var node3 = document.createElement('SPAN');
 		var node3attr1 = document.createAttribute('class');
 		var node3attr2 = document.createAttribute('data-a-target');
+		var node3attr3 = document.createAttribute('id');
 		node3attr1.value = 'tw-button__text';
 		node3attr2.value = 'tw-button-text';
+		node3attr3.value = 'downloadclipbutton';
 		node3.setAttributeNode(node3attr1);
 		node3.setAttributeNode(node3attr2);
+		node3.setAttributeNode(node3attr3);
 		node3.innerHTML = 'Download Clip';
 
 		node2.appendChild(node3);
 		node1.appendChild(node2);
 		twitchclipdownloader_insert.appendChild(node1);
+
+		document.getElementById('downloadclipbutton').addEventListener('click',function() {
+			chrome.runtime.sendMessage({
+				msg: 'downloadclip',
+				clipurl: twitchclipdownloader_video
+			});
+		});
+
 	},500);
+
+
 }
 
 // made by ravnurin.com
