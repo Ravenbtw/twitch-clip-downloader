@@ -1,13 +1,16 @@
 window.onload = function() {
-	setTimeout(function() {
 		var twitchclipdownloader_video = document.getElementsByTagName('video')[0].src;
 		var twitchclipdownloader_insert = document.getElementsByClassName('tw-align-items-center tw-flex tw-justify-content-end tw-pd-1')[0];
+
+		var twitchclipdownloader_insert_style = document.createAttribute('style');
+		twitchclipdownloader_insert_style.value = 'position:relative;';
+		twitchclipdownloader_insert.setAttributeNode(twitchclipdownloader_insert_style);
 
 		var node1 = document.createElement('DIV');
 		var node1attr1 = document.createAttribute('class');
 		var node1attr2 = document.createAttribute('style');
 		node1attr1.value = 'tw-inline-block';
-		node1attr2.value = 'margin-left:10px';
+		node1attr2.value = 'margin-left:10px;position:absolute;left:0px;';
 		node1.setAttributeNode(node1attr1);
 		node1.setAttributeNode(node1attr2);
 
@@ -41,10 +44,6 @@ window.onload = function() {
 				clipurl: twitchclipdownloader_video
 			});
 		});
-
-	},500);
-
-
 }
 
 // made by ravnurin.com
