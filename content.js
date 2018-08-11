@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = setInterval(function() {
 		var twitchclipdownloader_video = document.getElementsByTagName('video')[0].src;
 		var twitchclipdownloader_insert = document.getElementsByClassName('tw-align-items-center tw-flex tw-justify-content-end tw-pd-1')[0];
 
@@ -44,6 +44,6 @@ window.onload = function() {
 				clipurl: twitchclipdownloader_video
 			});
 		});
-}
+},2000)
 
 // made by ravnurin.com
