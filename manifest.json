@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Twitch Clip Downloader",
 	"short_name": "TCD",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"description": "Easily download Twitch clips with a single click!",
 	"content_scripts": [
 		{
