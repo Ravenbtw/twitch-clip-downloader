@@ -1,4 +1,4 @@
-window.onload = setInterval(function() {
+window.onload = setTimeout(function() {
 		var twitchclipdownloader_video = document.getElementsByTagName('video')[0].src;
 		var twitchclipdownloader_insert = document.getElementsByClassName('tw-align-items-center tw-flex tw-justify-content-end tw-pd-1')[0];
 
@@ -14,10 +14,10 @@ window.onload = setInterval(function() {
 		node1.setAttributeNode(node1attr1);
 		node1.setAttributeNode(node1attr2);
 
-		var node2 = document.createElement('A');
-		var node2attr1 = document.createAttribute('href');
+		var node2 = document.createElement('P');
+		var node2attr1 = document.createAttribute('style');
 		var node2attr2 = document.createAttribute('class');
-		node2attr1.value = '#';
+		node2attr1.value = 'cursor:pointer';
 		node2attr2.value = 'tw-button';
 		node2.setAttributeNode(node2attr1);
 		node2.setAttributeNode(node2attr2);
@@ -45,5 +45,9 @@ window.onload = setInterval(function() {
 			});
 		});
 },2000)
+
+setInterval(function() {
+	var twitchclipdownloader_video = document.getElementsByTagName('video')[0].src;
+},5000)
 
 // made by ravnurin.com
