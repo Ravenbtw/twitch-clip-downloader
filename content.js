@@ -11,7 +11,6 @@ var loadButton = setInterval(function functionName() {
 					name: document.getElementsByClassName('tw-font-size-3 tw-line-height-heading')[0].innerHTML.replace(/ /g, "_").replace(/[^a-zA-Z0-9\\_]/g, "") + ".mp4"
 				})
 			});
-			clearInterval(loadButton);
 		}
 	} else if (document.getElementsByClassName('video-chat__message-list-wrapper')[0]) {
 		var div = document.getElementsByClassName('tw-align-items-center tw-flex tw-flex-row tw-flex-shrink-0 tw-full-height tw-pd-1 video-info-bar__action-container')[0];
