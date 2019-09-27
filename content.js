@@ -25,7 +25,7 @@ window.onload = function () {
 					document.getElementById('downloadClipButton').addEventListener('click', function() {
 						chrome.runtime.sendMessage({
 							file: document.getElementsByTagName('video')[0].src,
-							name: document.getElementsByClassName('tw-ellipsis tw-font-size-5 tw-strong')[0].innerHTML.replace(/ /g, "_").replace(/[^a-zA-Z0-9\\_]/g, "") + ".mp4"
+							name: document.getElementsByClassName('tw-font-size-4 tw-strong')[0].querySelector('span').innerHTML.replace(/ /g, "_").replace(/[^a-zA-Z0-9\\_]/g, "") + ".mp4"
 						})
 					});
 				}
