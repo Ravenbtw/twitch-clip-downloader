@@ -11,4 +11,4 @@ IMAGE?
 
 # Instructions
 
-When you visit any clip page (clips.twitch.tv/* or twitch.tv/*/clip/*) a "Download Clip" button appears. When you click it, the clip starts downloading to your PC.
+When you visit any clip page (clips.twitch.tv/<CLIP_ID> or twitch.tv/<CHANNEL_NAME>/clip/<CLIP_ID>) a "Download Clip" button appears. When you click it, the clip starts downloading to your PC.
