@@ -3,7 +3,7 @@ Browser extension that allows you to download clips on Twitch.
 
 IMAGE? 
 
-# Downloads
+# Download
 
 [Chrome](https://chrome.google.com/webstore/detail/twitch-clip-downloader/klkjnhemebjdikndlpknonjedeefkedk?)
 
