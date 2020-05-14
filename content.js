@@ -3,10 +3,10 @@ let downloadButtonHTML = '<a class="tw-align-items-center tw-align-middle tw-bor
 function setButtonClick() {
 	document.querySelector('#downloadClipButton').onclick = () => {
 		let fileName;
-		if (document.querySelector('[data-test-selector="title"]')) {
-			fileName = document.querySelector('[data-test-selector="title"]').title;
+		if (document.querySelector('[data-a-target="stream-title"]')) {
+			fileName = `TCD_${document.querySelector('[data-a-target="stream-title"]').title}`;
 		} else if (document.querySelector('.tw-font-size-3.tw-line-height-heading')) {
-			fileName = document.querySelector('.tw-font-size-3.tw-line-height-heading').innerHTML;
+			fileName = `TCD_${document.querySelector('.tw-font-size-3.tw-line-height-heading').innerHTML}`;
 		}
 		chrome.runtime.sendMessage({
 			file: document.querySelector('video').src,
@@ -17,8 +17,8 @@ function setButtonClick() {
 
 let loadDownloadButton = setInterval(() => {
 	if (!document.querySelector('#downloadClipButton')) {
-		if (document.querySelector('.tw-align-items-center.tw-flex.tw-flex-row.tw-flex-shrink-0.tw-full-height.tw-pd-1.video-info-bar__action-container')) {
-			document.querySelector('.tw-align-items-center.tw-flex.tw-flex-row.tw-flex-shrink-0.tw-full-height.tw-pd-1.video-info-bar__action-container').firstChild.insertAdjacentHTML('beforebegin', downloadButtonHTML);
+		if (document.querySelector('[data-test-selector="clips-watch-full-button"]')) {
+			document.querySelector('[data-test-selector="clips-watch-full-button"]').insertAdjacentHTML('beforebegin', downloadButtonHTML);
 			setButtonClick();
 		} else if (document.querySelector('.clips-sidebar.tw-flex.tw-flex-column')) {
 			document.querySelector('.clips-sidebar.tw-flex.tw-flex-column').children[2].firstChild.firstChild.firstChild.insertAdjacentHTML('beforebegin', downloadButtonHTML);
