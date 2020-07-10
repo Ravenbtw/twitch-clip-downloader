@@ -2,12 +2,12 @@
 	"manifest_version": 2,
 	"name": "Twitch Clip Downloader",
 	"short_name": "TCD",
-	"version": "0.1.17",
+	"version": "0.1.18",
 	"description": "Easily download Twitch clips!",
 	"content_scripts": [
 		{
 			"matches": ["*://*.twitch.tv/*"],
-			"js": ["content.js"],
+			"js": ["content.js", "subscribers.js"],
 			"css": ["style.css"]
 		}
 	],
