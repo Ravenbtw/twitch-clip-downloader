@@ -7,8 +7,7 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.twitch.tv/*"],
-			"js": ["content.js", "subscribers.js"],
-			"css": ["style.css"]
+			"js": ["content.js", "subscribers.js"]
 		}
 	],
 	"background": {
