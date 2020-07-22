@@ -25,7 +25,7 @@ if (!document.querySelector('.ravenbtwDiv')) {
                         username = mutations[mutation].addedNodes[0].dataset.user;
                     }
                     if (ravenbtwBadges.includes(username)) {
-                        mutations[mutation].addedNodes[0].querySelector('.chat-line__username').insertAdjacentHTML('beforebegin', '<a href="https://twitch.tv/subs/ravenbtw" target="_blank"><img src="https://ravenbtw.com/img/ravenbtw_badge_18.png" class="chat-badge"></a>');
+                        mutations[mutation].addedNodes[0].querySelector('.chat-line__username').insertAdjacentHTML('beforebegin', '<a href="https://ravenbtw.com/#subscriberBadge" target="_blank"><img src="https://ravenbtw.com/img/ravenbtw_badge_18.png" class="chat-badge"></a>');
                     }
                 }
             }
