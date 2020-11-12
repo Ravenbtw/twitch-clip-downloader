@@ -17,23 +17,32 @@ function setButtonClick() {
 
 let loadDownloadButton = setInterval(() => {
 	if (!document.querySelector('#downloadClipButton')) {
-		if (document.querySelector('[data-test-selector="clips-watch-full-button"]')) {
-			document.querySelector('[data-test-selector="clips-watch-full-button"]').insertAdjacentHTML('beforebegin', downloadButtonHTML);
-			setButtonClick();
-		} else if (document.querySelector('.clips-sidebar.tw-flex.tw-flex-column')) {
-			document.querySelector('.clips-sidebar.tw-flex.tw-flex-column').children[2].firstChild.firstChild.firstChild.insertAdjacentHTML('beforebegin', downloadButtonHTML);
-			document.querySelector('#downloadClipButton').parentNode.style.width = '100%';
-			let floatInterval = setInterval(() => {
-				console.log(document.querySelector('#downloadClipButton').parentNode.children[1].style);
-				if (document.querySelector('#downloadClipButton').parentNode.children[1].style.float = 'right') {
-					clearInterval(floatInterval);
-					console.log('stopped interval');
-				} else {
-					document.querySelector('#downloadClipButton').parentNode.children[1].style.float = 'right';
-					console.log('looking for folat');
+		switch (document.getElementById('root').dataset.aPageLoadedName) {
+			case 'VideoWatchPage':
+				document.querySelector('[data-target="channel-header-right"]')
+					.firstChild.insertAdjacentHTML('beforebegin', downloadButtonHTML);
+				setButtonClick();
+				break;
+			case 'ClipsViewPage':
+				if (document.querySelector('[data-test-selector="clips-watch-full-button"]')) {
+					document.querySelector('[data-test-selector="clips-watch-full-button"]').insertAdjacentHTML('beforebegin', downloadButtonHTML);
+					setButtonClick();
+				} else if (document.querySelector('.clips-sidebar.tw-flex.tw-flex-column')) {
+					document.querySelector('.clips-sidebar.tw-flex.tw-flex-column').children[2].firstChild.firstChild.firstChild.insertAdjacentHTML('beforebegin', downloadButtonHTML);
+					document.querySelector('#downloadClipButton').parentNode.style.width = '100%';
+					let floatInterval = setInterval(() => {
+						console.log(document.querySelector('#downloadClipButton').parentNode.children[1].style);
+						if (document.querySelector('#downloadClipButton').parentNode.children[1].style.float = 'right') {
+							clearInterval(floatInterval);
+							console.log('stopped interval');
+						} else {
+							document.querySelector('#downloadClipButton').parentNode.children[1].style.float = 'right';
+							console.log('looking for folat');
+						}
+					}, 500);
+					setButtonClick();
 				}
-			}, 500);
-			setButtonClick();
+				break;
 		}
 	}
 }, 1000);
