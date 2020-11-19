@@ -6,6 +6,7 @@ if (!document.querySelector('.ravenbtwDiv')) {
     fetch('https://ravenbtw.com/api/subscribers')
     .then(data => data.json())
     .then(json => {
+        console.log(json);
         console.log('Loaded Ravenbtw subscribers.');
         const subStylesheet = document.createElement('style');
         document.head.appendChild(subStylesheet);
