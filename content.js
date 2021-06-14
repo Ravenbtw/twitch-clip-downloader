@@ -25,7 +25,7 @@ let loadDownloadButton = setInterval(() => {
 		};
 		if (location.pathname.includes('/clip/')) {
 			addButton();
-		} else if (document.querySelector('.clips-sidebar.tw-flex.tw-flex-column')) {
+		} else if (document.querySelector('[data-a-page-loaded-name="ClipsViewPage"]')) {
 			addButton();
 		} else if (document.querySelector('#downloadClipButton')) {
 			document.querySelector('#downloadClipButton').remove();
