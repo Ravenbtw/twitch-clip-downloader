@@ -2,15 +2,9 @@ let downloadButtonHTML = '<a class="tw-align-items-center tw-align-middle tw-bor
 
 function setButtonClick() {
 	document.querySelector('#downloadClipButton').onclick = () => {
-		let fileName;
-		if (document.querySelector('[title]')) {
-			fileName = `TCD_${document.querySelector('[title]').title}`;
-		} else {
-			fileName = `TCD_${new Date().getTime()}`;
-		}
 		chrome.runtime.sendMessage({
 			file: document.querySelector('video').src,
-			name: fileName.replace(/ /g, '_').replace(/[^a-zA-Z0-9\\_]/g, '') + '.mp4'
+			name: `TCD_${new Date().getTime()}.mp4`
 		});
 	}
 }
