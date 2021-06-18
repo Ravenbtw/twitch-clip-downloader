@@ -3,10 +3,10 @@ let downloadButtonHTML = '<a class="tw-align-items-center tw-align-middle tw-bor
 function setButtonClick() {
 	document.querySelector('#downloadClipButton').onclick = () => {
 		let fileName;
-		if (document.querySelector('[data-a-target="stream-title"]')) {
-			fileName = `TCD_${document.querySelector('[data-a-target="stream-title"]').title}`;
-		} else if (document.querySelector('.tw-font-size-3.tw-line-height-heading')) {
-			fileName = `TCD_${document.querySelector('.tw-font-size-3.tw-line-height-heading').innerHTML}`;
+		if (document.querySelector('[title]')) {
+			fileName = `TCD_${document.querySelector('[title]').title}`;
+		} else {
+			fileName = `TCD_${new Date().getTime()}`;
 		}
 		chrome.runtime.sendMessage({
 			file: document.querySelector('video').src,
@@ -25,7 +25,7 @@ let loadDownloadButton = setInterval(() => {
 		};
 		if (location.pathname.includes('/clip/')) {
 			addButton();
-		} else if (document.querySelector('.clips-sidebar.tw-flex.tw-flex-column')) {
+		} else if (document.querySelector('[data-a-page-loaded-name="ClipsViewPage"]')) {
 			addButton();
 		} else if (document.querySelector('#downloadClipButton')) {
 			document.querySelector('#downloadClipButton').remove();
