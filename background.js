@@ -1,4 +1,4 @@
-chrome.runtime.onInstalled.addListener(() => {
+chrome.browserAction.onClicked.addListener(() => {
   chrome.tabs.create({
       url: 'https://raven.fo/tcd-thanks',
       active: true

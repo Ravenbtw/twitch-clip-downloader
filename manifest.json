@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Twitch Clip Downloader",
 	"short_name": "TCD",
-	"version": "0.1.24",
+	"version": "0.1.25",
 	"description": "Easily download Twitch clips!",
 	"content_scripts": [
 		{
@@ -14,6 +14,7 @@
 	"background": {
 		"scripts": ["background.js"]
 	},
+	"browser_action": {},
 	"icons": {
 		"16": "icon16.png",
 		"48": "icon48.png",
