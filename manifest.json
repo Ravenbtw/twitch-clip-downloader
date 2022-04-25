@@ -1,26 +1,23 @@
 {
-	"manifest_version": 2,
-	"name": "Twitch Clip Downloader",
-	"short_name": "TCD",
-	"version": "0.1.25",
-	"description": "Easily download Twitch clips!",
-	"content_scripts": [
-		{
-			"matches": ["*://*.twitch.tv/*"],
-			"js": ["content.js"],
-			"css": ["deveasteregg.css"]
-		}
-	],
-	"background": {
-		"scripts": ["background.js"]
-	},
-	"browser_action": {},
-	"icons": {
-		"16": "icon16.png",
-		"48": "icon48.png",
-		"128": "icon128.png"
-	},
-	"permissions": [
-		"downloads"
-	]
+  "manifest_version": 2,
+  "name": "Twitch Clip Downloader",
+  "short_name": "TCD",
+  "version": "0.1.26",
+  "description": "Easily download Twitch clips!",
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitch.tv/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {},
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["downloads"]
 }

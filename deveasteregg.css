@@ -1,4 +1,0 @@
-[data-user="ravenbtw"]:hover > .chat-line__username, [data-a-user="ravenbtw"]:hover {
-    transition: text-shadow 0.1s;
-    text-shadow: 0 0 10px;
-}
