@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 300px;
+  height: 500px;
+  background-color: #111;
+}
+
+.bg-twitch-purple {
+  background-color: #9146ff;
+}

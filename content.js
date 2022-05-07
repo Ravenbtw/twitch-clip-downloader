@@ -31,3 +31,12 @@ let loadDownloadButton = setInterval(() => {
     }
   }
 }, 1000);
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  sendResponse({
+    type: 'sendVideo',
+    videoURL: document.querySelector('video').src,
+  });
+
+  return true;
+});

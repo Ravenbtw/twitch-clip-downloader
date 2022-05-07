@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitch Clip Downloader</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="popup.css" />
+    <script src="popup.js" defer></script>
+  </head>
+  <body
+    class="text-white text-center d-flex flex-column justify-content-between"
+  >
+    <a
+      href="#"
+      class="bg-twitch-purple text-white text-decoration-none d-flex justify-content-center p-3"
+    >
+      Twitch Clip Downloader
+    </a>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="mb-2">Clip Preview</p>
+          <video controls src="" class="w-100">Loading...</video>
+          <p class="mb-2">File Name</p>
+          <input
+            placeholder="Example: Forsen moves."
+            class="file-name form-control text-center"
+          />
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="#"
+      class="download-clip bg-twitch-purple text-white text-decoration-none d-flex justify-content-center p-3"
+    >
+      Download Clip
+    </a>
+  </body>
+</html>
