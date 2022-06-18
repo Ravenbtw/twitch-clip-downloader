@@ -1,0 +1,13 @@
+[data-a-user='ravenbtwx']::before,
+[data-user='ravenbtwx'] .chat-line__username::before {
+  background: url('https://www.raven.fo/badge');
+  width: 18px;
+  background-size: 18px;
+  height: 18px;
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  margin-right: 0.3rem;
+  margin-bottom: 0.15rem;
+}
